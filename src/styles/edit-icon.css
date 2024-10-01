@@ -1,0 +1,28 @@
+#icon {
+  display: none;
+}
+#icon_label {
+  width: 100%;
+  height: var(--btn-height-m);
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-m);
+  text-align: left;
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  margin-right: var(--margin-s);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+#icon_label:hover {
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+#icon_update_btn {
+  margin-top: var(--margin-l);
+}

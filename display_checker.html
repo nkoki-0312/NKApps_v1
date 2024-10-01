@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ディスプレイチェッカー</title>
+</head>
+<body>
+  <div id="displayDatas"></div>
+  <script>
+    const displayDatas = document.getElementById("displayDatas");
+
+    displayDatas.innerHTML = '\
+      画面幅:\t' + document.body.clientWidth + 'px<br>\
+      画面高さ:\t' + document.documentElement.clientHeight + 'px\
+    ';
+    
+    window.addEventListener("resize", () => {
+      displayDatas.innerHTML = '\
+        画面幅:\t' + document.body.clientWidth + 'px<br>\
+        画面高さ:\t' + document.documentElement.clientHeight + 'px\
+      ';
+    })
+  </script>  
+</body>
+</html>

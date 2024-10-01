@@ -1,0 +1,106 @@
+/* BASIC INFO */
+.basic-info {
+  width: 100%;
+  height: 128px;
+  margin-bottom: var(--margin-l);
+}
+.basic-info .icon {
+  width: 128px;
+  height: 128px;
+  margin-right: var(--margin-m);
+  float: left;
+}
+.basic-info .icon img {
+  /* width: calc( 100% - ( ( var(--font-size-s) * var(--line-height-l) ) + var(--margin-xxs) ) );
+  height: calc( 100% - ( ( var(--font-size-s) * var(--line-height-l) ) + var(--margin-xxs) ) ); */
+  width: 96px;
+  height: 96px;
+  border: 1px solid var(--nk-gray-25);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--margin-xxs);
+}
+.basic-info .name {
+  width: calc( 100% - ( 128px + var(--margin-m ) ) );
+  height: calc( var(--font-size-xxxl) * var(--line-height-l) );
+  font-size: var(--font-size-xxxl);
+  font-weight: bold;
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-xxxl) * var(--line-height-l) );
+  margin-top: calc( ( 128px - ( ( var(--font-size-xxxl) * var(--line-height-l) ) + ( var(--font-size-l) * var(--line-height-m) ) ) ) / 2 );
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.basic-info .id {
+  width: calc( 100% - ( 128px + var(--margin-m ) ) );
+  height: calc( var(--font-size-l) * var(--line-height-m) );
+  font-size: var(--font-size-l);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-l) * var(--line-height-l) );
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 959px) {
+  /* BASIC INFO */
+  .basic-info {
+    margin-bottom: var(--margin-xxl);
+  }
+  .basic-info .icon {
+    width: 100%;
+    height: calc(80px + var(--padding-xs));
+    padding-bottom: var(--padding-xs);
+    border-bottom: 1px solid var(--nk-gray-100);
+    margin-bottom: var(--margin-xxs);
+  }
+  .basic-info .icon .container-center {
+    display: block;
+  }
+  .basic-info .icon img {
+    width: 80px;
+    height: 80px;
+    margin-right: var(--margin-s);
+    margin-left: calc( ( 100% - ( 80px + var(--margin-s) + 116px ) ) / 2 );
+    float: left;
+  }
+  .basic-info .icon button {
+    margin: calc( ( 80px - var(--btn-height-s) ) / 2 ) 0;
+  }
+  .basic-info .name {
+    width: 100%;
+    height: calc( var(--font-size-xxl) * var(--line-height-m) );
+    font-size: var(--font-size-xxl);
+    line-height: calc( var(--font-size-xxl) * var(--line-height-m) );
+    margin-top: 0;
+    float: none;
+  }
+  .basic-info .id {
+    width: 100%;
+    height: calc( var(--font-size-s) * var(--line-height-m) );
+    font-size: var(--font-size-s);
+    line-height: calc( var(--font-size-s) * var(--line-height-l) );
+    float: left;
+  }
+
+  #userInfo .container-right {
+    display: block;
+  }
+  #userInfo button {
+    width: 100%;
+  }
+
+  .group .container-right {
+    display: block;
+  }
+  .group button {
+    width: 100%;
+    float: None;
+  }
+  .group .line-up {
+    margin: 0;
+    margin-top: var(--margin-xxs);
+  }
+}

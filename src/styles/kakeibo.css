@@ -1,0 +1,785 @@
+.app-form-container .normal-tab-container .btn {
+  width: calc( 100% / 3 );
+}
+.app-form-container .normal-tab-container .form {
+  height: calc( 100vh - ( var(--header-height) + ( var(--margin-l) * 2 ) + ( var(--margin-s) * 2 ) + ( var(--padding-xs) * 2 ) + ( var(--font-size-xxl) * var(--line-height-l) ) + var(--btn-height-m) + ( var(--font-size-l) * var(--line-height-m) * var(--line-height-m) ) ) );
+  padding: var(--padding-xs) var(--padding-xs) 0 var(--padding-xs);
+}
+.app-form-container .short-form-amount {
+  width: calc( 100% - 24px );
+  margin-right: 0;
+}
+.app-form-container .short-form-asset-cat {
+  width: calc( 100% - 38px );
+  margin-right: 0;
+}
+.app-form-container input[type="number"] {
+  text-align: right;
+}
+.app-form-container .sub-text {
+  width: 24px;
+}
+.app-form-container .sub-text {
+  width: 38px;
+}
+.normal-tab-container .contents .content {
+  padding: 0;
+}
+
+details.simple {
+  width: 100%;
+  margin: 0;
+}
+details.simple .content {
+  padding: var(--padding-xxs) 0 var(--padding-s) 0;
+}
+
+.single-block-large {
+  display: flex;
+}
+.select-form .row-left {
+  display: flex;
+}
+.select-form .row-left button {
+  width: 32px;
+  height: var(--btn-height-s);
+  padding: 0;
+  margin: 0;
+}
+.select-form .row-left #displayAtViewer {
+  height: var(--btn-height-s);
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  text-align: center;
+  padding: 0 var(--padding-xxs);
+}
+.select-form .row-right select {
+  width: 110px;
+}
+.select-form .row-right button {
+  width: 120px;
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  text-align: left;
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  display: flex;
+}
+.select-form .row-right button:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.select-form .row-right button .display-select-group {
+  width: calc( 100% - var(--font-size-s) );
+  height: var(--btn-height-s);
+}
+.select-form .row-right button .triangle {
+  width: var(--font-size-s);
+  height: var(--btn-height-s);
+}
+.select-form .row .select-group-container {
+  width: 200px;
+  text-align: left;
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-top: var(--btn-height-s);
+  margin-left: -16px;
+  position: fixed;
+  z-index: 1002;
+  display: none;
+}
+.select-form .row .select-group-container input[type="checkbox"] {
+  display: none;
+}
+.select-form .row .select-group-container label {
+  width: 100%;
+  height: var(--btn-height-s);
+  padding: 0 var(--padding-xxs);
+  border-radius: var(--radius-m);
+  margin-bottom: var(--margin-xxxs);
+  display: block;
+}
+.select-form .row .select-group-container label:hover {
+  cursor: pointer;
+  background: var(--nk-gray-25);
+  transition: 0.25s;
+}
+.select-form .row .select-group-container label .ttl {
+  width: 100%;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label {
+  padding: 0 calc( var(--padding-xxs) - 2px );
+  border: 2px solid var(--nk-primary-blue-500);
+  transition: 0.1s;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label .ttl {
+  line-height: calc( var(--btn-height-s) - ( 2px * 2 ) );
+  transition: 0.1s;
+}
+
+/* MODAL */
+.modal .content .top {
+  width: 100%;
+  margin-bottom: var(--margin-s);
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal .content .top .basic-info {
+  width: calc( 100% - 170px );
+}
+.modal .content .top .basic-info .ttl {
+  width: 100%;
+  height: calc( var(--font-size-xxl) * var(--line-height-l) );
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-xxl) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .amount, .modal .content .top .basic-info .asset-cat, .modal .content .top .basic-info .date {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-l) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .text {
+  width: 100%;
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-m) * var(--line-height-m) );
+  margin-top: var(--margin-xs);
+}
+.modal .content .top .btn-container {
+  width: 170px;
+}
+.modal .content .top .btn-container button {
+  width: 100%;
+}
+.modal .content .normal-tab-container .contents .content {
+  overflow-y: hidden;
+  padding: var(--padding-s);
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr th {
+  width: 161px;
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr td {
+  width: calc( 100% - 161px );
+}
+.modal details[open] {
+  padding-bottom: var(--padding-xs);
+}
+.modal details[open] .explanation {
+  margin: 0;
+}
+.modal .add-form {
+  width: 100%;
+  height: var(--btn-height-m);
+  margin: var(--margin-xxs) 0;
+  display: flex;
+}
+.modal .add-form input, .modal .add-form select {
+  width: calc( ( 100% - ( 82px + ( var(--margin-xxs) * 2 ) ) ) / 2 );
+  height: var(--btn-height-m);
+  font-size: var(--font-size-l);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-m);
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  margin: 0 var(--margin-xxs) 0 0;
+  
+}
+.modal .add-form input:focus, .modal .add-form select:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.modal #assetList {
+  width: 100%;
+  margin: var(--margin-s) 0;
+}
+.modal #assetList .no-data {
+  text-align: center;
+}
+.modal #assetList .row {
+  width: 100%;
+  height: calc( var(--btn-height-m) + ( var(--padding-xs) * 2 ) );
+  padding: var(--padding-xs) 0;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--margin-xs);
+}
+.modal #assetList .row .view-mode {
+  width: 100%;
+  display: flex;
+}
+.modal #assetList .row .view-mode .left-block {
+  width: calc( ( 100% - ( 82px + ( var(--margin-xxs) * 2 ) ) ) / 2 );
+  height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  margin-right: var(--margin-xxs);
+}
+.modal #assetList .row .view-mode .left-block .ttl {
+  width: 100%;
+  height: calc( var(--font-size-l) * var(--line-height-m) );
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-l) * var(--line-height-m) );
+}
+.modal #assetList .row .view-mode .left-block .group {
+  width: 100%;
+  font-size: var(--font-size-s);
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+.modal #assetList .row .view-mode .amount {
+  width: calc( ( 100% - ( 82px + ( var(--margin-xxs) * 2 ) ) ) / 2 );
+  height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  text-align: right;
+  margin-right: var(--margin-xxs);
+}
+.modal #assetList .row .view-mode button {
+  margin: calc( ( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) - var(--btn-height-m) ) / 2 ) 0;
+}
+.modal #assetList .row .edit-mode {
+  width: 100%;
+  display: none;
+}
+.modal #assetList .row .edit-mode button {
+  margin-right: var(--margin-xxs);
+}
+.modal #assetList .row .edit-mode .change-mode-btn, .modal #assetList .row .edit-mode .delete-btn {
+  font-size: var(--font-size-l);
+  padding: 0 var(--padding-xs);
+}
+.modal #assetList .row .edit-mode .delete-btn {
+  margin: 0;
+}
+.modal #assetList .row .edit-mode .asset-name, .modal #assetList .row .edit-mode .amount-container .asset-amount {
+  width: calc( ( 100% - ( 82px + 80px + ( var(--margin-xxs) * 4 ) ) ) / 2 );
+  height: var(--btn-height-m);
+  font-size: var(--font-size-l);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-m);
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  margin: 0 var(--margin-xxs) 0 0;
+}
+.modal #assetList .row .edit-mode .asset-name:focus, .modal #assetList .row .edit-mode .amount-container .asset-amount:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.modal #assetList .row .edit-mode .amount-container {
+  width: calc( ( 100% - ( 82px + 80px + ( var(--margin-xxs) * 4 ) ) ) / 2 );
+  height: var(--btn-height-m);
+  display: flex;
+}
+.modal #assetList .row .edit-mode .amount-container .asset-amount {
+  width: calc( 100% - 20px );
+  height: var(--btn-height-m);
+  text-align: right;
+}
+.modal #assetList .row .edit-mode .amount-container .text {
+  width: 20px;
+  height: var(--btn-height-m);
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: var(--btn-height-m);
+  text-align: center;
+}
+
+.modal #bopList {
+  width: 100%;
+  margin: var(--margin-s) 0;
+}
+.modal #bopList .no-data {
+  text-align: center;
+}
+.modal #bopList .row {
+  width: 100%;
+  height: calc( var(--btn-height-m) + ( var(--padding-xs) * 2 ) );
+  padding: var(--padding-xs) 0;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--margin-xs);
+}
+.modal #bopList .row .view-mode {
+  width: 100%;
+  display: flex;
+}
+.modal #bopList .row .view-mode .left-block {
+  width: calc( 100% - ( 82px + ( var(--margin-xxs) * 2 ) ) );
+  height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  margin-right: var(--margin-xxs);
+}
+.modal #bopList .row .view-mode .left-block .ttl {
+  width: 100%;
+  height: calc( var(--font-size-l) * var(--line-height-m) );
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-l) * var(--line-height-m) );
+}
+.modal #bopList .row .view-mode .left-block .group {
+  width: 100%;
+  font-size: var(--font-size-s);
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+.modal #bopList .row .view-mode .amount {
+  width: calc( ( 100% - ( 82px + ( var(--margin-xxs) * 2 ) ) ) / 2 );
+  height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: calc( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+  text-align: right;
+  margin-right: var(--margin-xxs);
+}
+.modal #bopList .row .view-mode button {
+  margin: calc( ( ( var(--font-size-l) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) - var(--btn-height-m) ) / 2 ) 0;
+}
+.modal #bopList .row .edit-mode {
+  width: 100%;
+  display: none;
+}
+.modal #bopList .row .edit-mode button {
+  margin-right: var(--margin-xxs);
+}
+.modal #bopList .row .edit-mode .change-mode-btn, .modal #bopList .row .edit-mode .delete-btn {
+  font-size: var(--font-size-l);
+  padding: 0 var(--padding-xs);
+}
+.modal #bopList .row .edit-mode .delete-btn {
+  margin: 0;
+}
+.modal #bopList .row .edit-mode .bop-name {
+  width: calc( 100% - ( 82px + 80px + ( var(--margin-xxs) * 4 ) ) );
+  height: var(--btn-height-m);
+  font-size: var(--font-size-l);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-m);
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  margin: 0 var(--margin-xxs) 0 0;
+}
+.modal #bopList .row .edit-mode .bop-name:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.modal #bopList .row .edit-mode .amount-container {
+  width: calc( ( 100% - ( 82px + 80px + ( var(--margin-xxs) * 4 ) ) ) / 2 );
+  height: var(--btn-height-m);
+  display: flex;
+}
+.modal #bopList .row .edit-mode .amount-container .bop-amount {
+  width: calc( 100% - 20px );
+  height: var(--btn-height-m);
+  text-align: right;
+}
+.modal #bopList .row .edit-mode .amount-container .text {
+  width: 20px;
+  height: var(--btn-height-m);
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: var(--btn-height-m);
+  text-align: center;
+}
+
+#charts {
+  width: 100%;
+  height: calc( 100% - ( var(--btn-height-s) + ( var(--padding-xs) * 2 ) + var(--margin-m) ) );
+  padding: var(--padding-xxxs);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#charts .summary-container {
+  width: 100%;
+  /* height: calc( ( var(--font-size-xxl) * var(--line-height-l) ) + ( var(--padding-xxxs) * 2 ) ); */
+  margin-bottom: var(--margin-s);
+  display: flex;
+}
+#charts .summary-container .content {
+  width: calc( ( 100% - ( var(--margin-xs) * 3 ) ) / 4 );
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-right: var(--margin-xs);
+  display: flex;
+}
+#charts .summary-container .content:nth-last-child(1) {
+  margin: 0;
+}
+#charts .summary-container .content .ttl {
+  width: 48px;
+  height: calc( var(--font-size-m) * var(--line-height-m) );
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  line-height: calc( var(--font-size-m) * var(--line-height-m) );
+  margin-top: calc( ( var(--font-size-xxl) * var(--line-height-l) ) - ( var(--font-size-m) * var(--line-height-m) ) );
+  margin-right: var(--margin-xxs);
+}
+#charts .summary-container .income .ttl {
+  color: var(--nk-green-500);
+}
+#charts .summary-container .expense .ttl {
+  color: var(--nk-red-500);
+}
+#charts .summary-container .diff .ttl {
+  color: var(--secondary-color);
+}
+#charts .summary-container .total .ttl {
+  color: var(--primary-color);
+}
+#charts .summary-container .content .amount {
+  width: calc( 100% - ( 48px + var(--margin-xxs) ) );
+  height: calc( var(--font-size-xxl) * var(--line-height-l) );
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-xxl) * var(--line-height-l) );
+  text-align: right;
+}
+
+#charts .main-chart-container {
+  width: 100%;
+  height: 300px;
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-bottom: var(--margin-s);
+}
+#charts .main-chart-container .ctrl-bar {
+  width: 100%;
+  height: var(--btn-height-s);
+  margin-bottom: var(--margin-xxs);
+}
+#charts .main-chart-container .ctrl-bar .row {
+  display: flex;
+  justify-content: right;
+}
+#charts .main-chart-container .ctrl-bar .row .ttl {
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  padding: 0 var(--padding-xxxs);
+}
+#charts .main-chart-container .ctrl-bar .row select {
+  width: 120px;
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+}
+#charts .main-chart-container .ctrl-bar .row select:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+#charts .main-chart-container .chart-container {
+  width: 100%;
+  height: calc( 300px - ( var(--btn-height-s) + var(--margin-xxs) + ( var(--padding-xs) * 2 ) ) );
+}
+#charts .main-chart-container .chart-container #summary {
+  width: 100%;
+  height: 100%;
+}
+#charts .main-chart-container .chart-container .no-datas {
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: calc( 300px - ( var(--btn-height-s) + var(--margin-xxs) + ( var(--padding-xs) * 2 ) ) );
+  text-align: center;
+  display: none;
+}
+
+#charts .double-charts {
+  width: 100%;
+  display: flex;
+}
+#charts .double-charts .pie-chart-container {
+  width: calc( ( 100% - var(--margin-s) ) / 2 );
+  height: calc( ( 300px * 2 ) + var(--margin-xs) + ( var(--padding-xs) * 2 ) + ( var(--font-size-xl) * var(--line-height-l) * 2 ) );
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-right: var(--margin-s);
+}
+#charts .double-charts .pie-chart-container .chart-container {
+  width: 100%;
+  height: calc( ( 300px * 2 ) + var(--margin-xs) + ( var(--font-size-xl) * var(--line-height-l) * 2 ) );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#charts .double-charts .pie-chart-container .chart-container .ternary-ttl {
+  margin: 0;
+}
+#charts .double-charts .pie-chart-container .chart-container .expense-chart {
+  width: 300px;
+  height: 300px;
+  margin: 0 calc( ( 100% - 300px ) / 2 );
+  margin-bottom: var(--margin-xs);
+}
+#charts .double-charts .pie-chart-container .chart-container .income-chart {
+  width: 300px;
+  height: 300px;
+  margin: 0 calc( ( 100% - 300px ) / 2 );
+}
+#charts .double-charts .pie-chart-container .chart-container .no-datas {
+  width: 100%;
+  height: 300px;
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: 300px;
+  text-align: center;
+  display: none;
+}
+
+#charts .double-charts .bop-list-container {
+  width: calc( ( 100% - var(--margin-s) ) / 2 );
+  height: calc( ( 300px * 2 ) + var(--margin-xs) + ( var(--padding-xs) * 2 ) + ( var(--font-size-xl) * var(--line-height-l) * 2 ) );
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-bottom: var(--margin-s);
+}
+#charts .double-charts .bop-list-container .ctrl-bar {
+  width: 100%;
+  height: var(--btn-height-s);
+  margin-bottom: var(--margin-xxs);
+}
+#charts .double-charts .bop-list-container .ctrl-bar .row {
+  display: flex;
+  justify-content: right;
+}
+#charts .double-charts .bop-list-container .ctrl-bar .row .ttl {
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  padding: 0 var(--padding-xxxs);
+}
+#charts .double-charts .bop-list-container .ctrl-bar .row select {
+  width: 120px;
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+}
+#charts .double-charts .bop-list-container .ctrl-bar .row select:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+#charts .double-charts .bop-list-container #bopList {
+  width: 100%;
+  height: calc( ( ( 300px * 2 ) + var(--margin-xs) + ( var(--padding-xs) * 2 ) + ( var(--font-size-xl) * var(--line-height-l) * 2 ) ) - ( var(--btn-height-s) + var(--margin-xxs) + ( var(--padding-xs) * 2 ) ) );
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#charts .double-charts .bop-list-container #bopList .no-datas {
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size-m);
+  color: var(--secondary-color);
+  line-height: calc( 300px - ( var(--btn-height-s) + var(--margin-xxs) + ( var(--padding-xs) * 2 ) ) );
+  text-align: center;
+}
+#charts .double-charts .bop-list-container #bopList .row {
+  width: 100%;
+  padding: var(--padding-xxs);
+  border-bottom: 1px solid var(--nk-gray-25);
+  display: flex;
+}
+#charts .double-charts .bop-list-container #bopList .row:hover {
+  cursor: pointer;
+  background: var(--nk-gray-25);
+  transition: 0.25s;
+}
+#charts .double-charts .bop-list-container #bopList .row .left-block {
+  width: calc( 70% - var(--padding-xxs) );
+  margin-right: var(--padding-xxs);
+}
+#charts .double-charts .bop-list-container #bopList .row .left-block .bop-name {
+  width: 100%;
+  height: calc( var(--font-size-l) * var(--line-height-m) );
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-l) * var(--line-height-m) );
+}
+#charts .double-charts .bop-list-container #bopList .row .left-block .date {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  color: var(--secondary-color);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+#charts .double-charts .bop-list-container #bopList .row .amount {
+  width: 30%;
+  height: calc( ( var(--font-size-l) + var(--font-size-s) ) * var(--line-height-m) );
+  font-size: var(--font-size-l);
+  color: var(--secondary-color);
+  line-height: calc( ( var(--font-size-l) + var(--font-size-s) ) * var(--line-height-m) );
+  text-align: right;
+}
+
+@media screen and ( max-width: 959px ) {
+  /* HEADER */
+  .h-menu .cat-btn-container {
+    border-bottom: 2px solid var(--border-color);
+  }
+  .h-menu .cat-btn-container button {
+    width: 100%;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: var(--margin-xxs);
+    padding: 6px;
+  }
+  .h-menu .notice-list-container-h-menu {
+    height: calc( 100vh - ( var(--header-height) + var(--btn-height-l) + ( var(--margin-xxs) * 6 ) + ( var(--btn-height-m) * 3 ) + ( var(--padding-s) * 2 ) + ( var(--btn-height-m) * 2 ) ) );
+  }
+  .h-menu .notice-list-container-h-menu .notice-list-h-menu {
+    height: calc( 100vh - ( var(--header-height) + var(--btn-height-l) + ( var(--margin-xxs) * 6 ) + ( var(--btn-height-m) * 3 ) + ( var(--padding-s) * 2 ) + ( var(--font-size-l) * var(--line-height-m) ) + ( var(--btn-height-m) * 2 ) ) );
+  }
+
+  .single-block-large {
+    display: block;
+  }
+
+  /* SELECT FORM */
+  .select-form {
+    height: calc( ( var(--btn-height-s) * 3 ) + ( var(--padding-xs) * 1 ) + var(--margin-xxs) );
+    margin-bottom: var(--margin-xxs);
+  }
+  .select-form .row {
+    margin-right: var(--margin-xxxs);
+  }
+  .select-form .row-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--margin-xxs);
+  }
+  .select-form .row-left button {
+    height: var(--btn-height-s);
+  }
+  .select-form .row-left #displayAtViewer {
+    width: calc( 100% - ( 32px * 2 ) );
+    font-size: var(--font-size-s);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .select-form .row-right {
+    width: calc( ( 100% - var(--margin-xxs) ) / 2 );
+    height: calc( var(--btn-height-s) * 2 );
+    float: left;
+    display: block;
+  }
+  .select-form .row-right .ttl {
+    width: 100%;
+  }
+  .select-form .row-right select {
+    width: 100%;
+  }
+
+  /* MODAL */
+  .modal .content .top {
+    display: block;
+  }
+  .modal .content .top .basic-info {
+    width: 100%;
+  }
+  .modal .content .top .basic-info .span {
+    height: calc( var(--font-size-s) * var(--line-height-l) * 2 );
+  }
+  .modal .content .top .basic-info .text {
+    width: 100%;
+    font-size: var(--font-size-m);
+    color: var(--nk-gray-500);
+    line-height: calc( var(--font-size-m) * var(--line-height-m) );
+    margin-top: var(--margin-xs);
+  }
+  .modal .content .top .btn-container {
+    width: 100%;
+  }
+  .modal .content .top .btn-container button {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr th {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr td {
+    width: 100%;
+  }
+
+  /* CHARTS */
+  #charts {
+    overflow: hidden;
+  }
+  #charts .summary-container {
+    display: block;
+  }
+  #charts .summary-container .content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: var(--margin-xxs);
+  }
+  
+  #charts .main-chart-container .ctrl-bar {
+    width: 100%;
+    height: var(--btn-height-s);
+    margin-bottom: var(--margin-xxs);
+  }
+  #charts .main-chart-container .chart-container {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  #charts .main-chart-container .chart-container #summary {
+    width: max(500px, 100%) !important;
+    height: 100%;
+  }
+  
+  #charts .double-charts {
+    display: block;
+  }
+  #charts .double-charts .pie-chart-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: var(--margin-s);
+  }
+  
+  #charts .double-charts .bop-list-container {
+    width: 100%;
+  }
+} 

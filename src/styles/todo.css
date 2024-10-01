@@ -1,0 +1,408 @@
+details.simple {
+  width: 100%;
+  margin: 0;
+}
+details.simple .content {
+  padding: var(--padding-xxs) 0 var(--padding-s) 0;
+}
+
+.single-block-large {
+  display: flex;
+}
+.select-form .row-right select {
+  width: 110px;
+}
+.select-form .row-right button {
+  width: 120px;
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  text-align: left;
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  display: flex;
+}
+.select-form .row-right button:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.select-form .row-right button .display-select-group {
+  width: calc( 100% - var(--font-size-s) );
+  height: var(--btn-height-s);
+}
+.select-form .row-right button .triangle {
+  width: var(--font-size-s);
+  height: var(--btn-height-s);
+}
+.select-form .row .select-group-container {
+  width: 200px;
+  text-align: left;
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-top: var(--btn-height-s);
+  margin-left: -16px;
+  position: fixed;
+  z-index: 1002;
+  display: none;
+}
+.select-form .row .select-group-container input[type="checkbox"] {
+  display: none;
+}
+.select-form .row .select-group-container label {
+  width: 100%;
+  height: var(--btn-height-s);
+  padding: 0 var(--padding-xxs);
+  border-radius: var(--radius-m);
+  margin-bottom: var(--margin-xxxs);
+  display: block;
+}
+.select-form .row .select-group-container label:hover {
+  cursor: pointer;
+  background: var(--nk-gray-25);
+  transition: 0.25s;
+}
+.select-form .row .select-group-container label .ttl {
+  width: 100%;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label {
+  padding: 0 calc( var(--padding-xxs) - 2px );
+  border: 2px solid var(--nk-primary-blue-500);
+  transition: 0.1s;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label .ttl {
+  line-height: calc( var(--btn-height-s) - ( 2px * 2 ) );
+  transition: 0.1s;
+}
+
+/* TODO LIST */
+#todoList {
+  width: 100%;
+  height: calc( 100% - ( var(--btn-height-s) + ( var(--padding-xs) * 2 ) + var(--margin-m) ) );
+  padding-right: var(--padding-xxs);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#todoList .todo {
+  width: 100%;
+  height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) + ( var(--radius-l) * 2 ) );
+  padding: var(--radius-l);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-bottom: var(--margin-xs);
+  display: flex;
+}
+#todoList .todo:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+#todoList .todo .label {
+  width: 8px;
+  height: 48px;
+  margin: calc( ( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) - 48px ) / 2 ) 0;
+  margin-right: var(--margin-xxs);
+}
+#todoList .todo .checkmark-container {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-m) * var(--line-height-s) );
+  padding: 0 calc((var(--font-size-m)* var(--line-height-s)) + var(--padding-xxs));
+  margin: calc( ( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) - 48px ) / 2 );
+  user-select: none;
+  display: block;
+  position: relative;
+}
+#todoList .todo .checkmark-container .checkmark {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  border: 2px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+}
+#todoList .todo .checkmark-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 12px;
+  top: 0px;
+  width: calc(48px* 0.3);
+  height: calc(48px* 0.6);
+  border: 4px solid var(--primary-color);
+  border-width: 0 6px 6px 0;
+  transform: rotate(45deg);
+}
+#todoList .todo .checkmark-container input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+  transition: 0.25s;
+}
+#todoList .todo .text-container {
+  width: 100%;
+  height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) );
+  display: flex;
+}
+#todoList .todo .text-container-left {
+  width: calc( 100% - ( 4px + var(--margin-xxs) + 64px + ( var(--margin-s) * 2 ) ) );
+  height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) );
+  margin-right: var(--margin-s);
+}
+#todoList .todo .text-container-left .ttl {
+  width: 100%;
+  height: calc( var(--font-size-xxl) * var(--line-height-m) );
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  line-height: calc( var(--font-size-xxl) * var(--line-height-m) );
+}
+#todoList .todo .text-container-left .span {
+  width: 100%;
+  height: calc( var(--font-size-m) * var(--line-height-m) );
+  font-size: var(--font-size-m);
+  line-height: calc( var(--font-size-m) * var(--line-height-m) );
+}
+#todoList .todo .text-container-right {
+  width: 150px;
+  height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) );
+}
+#todoList .todo .text-container-right .group {
+  width: 150px;
+  height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) );
+  font-size: var(--font-size-m);
+  line-height: calc( ( var(--font-size-xxl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) );
+  text-align: right;
+}
+
+/* MODAL */
+.modal .content .top {
+  width: 100%;
+  margin-bottom: var(--margin-s);
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal .content .top .basic-info {
+  width: calc( 100% - 170px );
+}
+.modal .content .top .basic-info .ttl {
+  width: 100%;
+  height: calc( var(--font-size-xxl) * var(--line-height-l) );
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-xxl) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .span {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-l) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .text {
+  width: 100%;
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-m) * var(--line-height-m) );
+  margin-top: var(--margin-xs);
+}
+.modal .content .top .btn-container {
+  width: 170px;
+}
+.modal .content .top .btn-container button {
+  width: 100%;
+}
+.modal .content .normal-tab-container .contents .content {
+  overflow-y: hidden;
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr th {
+  width: 145px;
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr td {
+  width: calc( 100% - 145px );
+}
+
+@media screen and ( max-width: 959px ) {
+  .single-block-large {
+    display: block;
+  }
+  
+  /* SELECT FORM */
+  .select-form {
+    height: calc( var(--btn-height-s) + var(--padding-xs) );
+    margin-bottom: var(--margin-xxs);
+    display: flex;
+    justify-content: right;
+  }
+  .select-form .row {
+    margin-left: var(--margin-xxs);
+    margin-right: 0;
+  }
+  .select-form .row .ttl {
+    display: none;
+  }
+  .select-form .row-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--margin-xxs);
+  }
+  .select-form .row-left button {
+    height: var(--btn-height-s);
+  }
+  .select-form .row-left #displayAtViewer {
+    width: calc( 100% - ( 32px * 2 ) );
+    font-size: var(--font-size-s);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .select-form .row-right button {
+    width: 100px;
+    font-size: var(--font-size-xs);
+  }
+  .select-form .row-right button .display-select-group {
+    width: calc( 100% - var(--font-size-s) );
+    height: var(--btn-height-s);
+  }
+  .select-form .row-right button .triangle {
+    width: var(--font-size-s);
+    height: var(--btn-height-s);
+  }
+  .select-form .row .select-group-container {
+    width: 200px;
+    text-align: left;
+    background: var(--white);
+    padding: var(--padding-xs);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-default) var(--nk-gray-100);
+    margin-top: var(--btn-height-s);
+    margin-left: -44px;
+    position: fixed;
+    z-index: 1002;
+    display: none;
+  }
+  .select-form .row .select-group-container input[type="checkbox"] {
+    display: none;
+  }
+  .select-form .row .select-group-container label {
+    width: 100%;
+    height: var(--btn-height-s);
+    padding: 0 var(--padding-xxs);
+    border-radius: var(--radius-m);
+    margin-bottom: var(--margin-xxxs);
+    display: block;
+  }
+  .select-form .row .select-group-container label:hover {
+    cursor: pointer;
+    background: var(--nk-gray-25);
+    transition: 0.25s;
+  }
+  .select-form .row .select-group-container label .ttl {
+    width: 100%;
+  }
+  .select-form .row .select-group-container input[type="checkbox"]:checked + label {
+    padding: 0 calc( var(--padding-xxs) - 2px );
+    border: 2px solid var(--nk-primary-blue-500);
+    transition: 0.1s;
+  }
+  .select-form .row .select-group-container input[type="checkbox"]:checked + label .ttl {
+    line-height: calc( var(--btn-height-s) - ( 2px * 2 ) );
+    transition: 0.1s;
+  }
+
+  /* TODO LIST */
+  #todoList {
+    height: calc( 100vh - ( var(--header-height) + var(--btn-height-m) + var(--btn-height-s) + var(--padding-xs) + ( var(--margin-xs) * 2 ) + ( var(--margin-xxs) * 2 ) ) );
+  }
+  #todoList .todo {
+    height: calc( ( var(--font-size-xl) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) + ( var(--radius-l) * 2 ) );
+  }
+  #todoList .todo .label {
+    width: 8px;
+    height: 40px;
+    margin: calc( ( ( var(--font-size-xl) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) - 40px ) / 2 ) 0;
+  }
+  #todoList .todo .checkmark-container {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: calc( ( ( var(--font-size-xl) * var(--line-height-m) ) + ( var(--font-size-m) * var(--line-height-m) ) - 40px ) / 2 );
+    user-select: none;
+    display: block;
+    position: relative;
+  }
+  #todoList .todo .checkmark-container .checkmark {
+    width: 40px;
+    height: 40px;
+  }
+  #todoList .todo .checkmark-container .checkmark:after {
+    left: 9px;
+    width: calc(40px* 0.3);
+    height: calc(40px* 0.6);
+  }
+  #todoList .todo .text-container {
+    width: 100%;
+    height: calc( ( var(--font-size-xl) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+    display: flex;
+  }
+  #todoList .todo .text-container-left {
+    width: 100%;
+    height: calc( ( var(--font-size-xl) * var(--line-height-m) ) + ( var(--font-size-s) * var(--line-height-m) ) );
+    margin-right: 0;
+  }
+  #todoList .todo .text-container-left .ttl {
+    width: 100%;
+    height: calc( var(--font-size-xl) * var(--line-height-m) );
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    line-height: calc( var(--font-size-xl) * var(--line-height-m) );
+  }
+  #todoList .todo .text-container-left .span {
+    height: calc( var(--font-size-xs) * var(--line-height-m) );
+    font-size: var(--font-size-xs);
+    line-height: calc( var(--font-size-xs) * var(--line-height-m) );
+  }
+  #todoList .todo .text-container-right {
+    display: none;
+  }
+  #todoList .todo .text-container-right .group {
+    display: none;
+  }
+
+  /* MODAL */
+  .modal .content .top {
+    display: block;
+  }
+  .modal .content .top .basic-info {
+    width: 100%;
+  }
+  .modal .content .top .basic-info .span {
+    height: calc( var(--font-size-s) * var(--line-height-l) * 2 );
+  }
+  .modal .content .top .basic-info .text {
+    width: 100%;
+    font-size: var(--font-size-m);
+    color: var(--nk-gray-500);
+    line-height: calc( var(--font-size-m) * var(--line-height-m) );
+    margin-top: var(--margin-xs);
+  }
+  .modal .content .top .btn-container {
+    width: 100%;
+  }
+  .modal .content .top .btn-container button {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr th {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr td {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,6 @@
+.form .short-form {
+  margin-right: 0;
+}
+.form input[type="number"] {
+  text-align: right;
+}

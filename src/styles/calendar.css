@@ -1,0 +1,533 @@
+.single-block-large {
+  display: flex;
+}
+
+/* SELECT FORM */
+.select-form .row-left {
+  display: flex;
+}
+.select-form .row-left button {
+  width: 32px;
+  height: var(--btn-height-s);
+  padding: 0;
+  margin: 0;
+}
+.select-form .row-left #displayAtViewer {
+  height: var(--btn-height-s);
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  text-align: center;
+  padding: 0 var(--padding-xxs);
+}
+.select-form .row-right select {
+  width: 96px;
+}
+.select-form .row-right button {
+  width: 120px;
+  height: var(--btn-height-s);
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: var(--btn-height-s);
+  text-align: left;
+  background: var(--white);
+  padding: 0 var(--padding-xxs);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-m);
+  display: flex;
+}
+.select-form .row-right button:focus {
+  border: none;
+  box-shadow: var(--shadow-focus) var(--nk-primary-blue-500);
+  transition: 0.25s;
+}
+.select-form .row-right button .display-select-group {
+  width: calc( 100% - var(--font-size-s) );
+  height: var(--btn-height-s);
+}
+.select-form .row-right button .triangle {
+  width: var(--font-size-s);
+  height: var(--btn-height-s);
+}
+.select-form .row .select-group-container {
+  width: 200px;
+  text-align: left;
+  background: var(--white);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-top: var(--btn-height-s);
+  margin-left: -16px;
+  position: fixed;
+  z-index: 1002;
+  display: none;
+}
+.select-form .row .select-group-container input[type="checkbox"] {
+  display: none;
+}
+.select-form .row .select-group-container label {
+  width: 100%;
+  height: var(--btn-height-s);
+  padding: 0 var(--padding-xxs);
+  border-radius: var(--radius-m);
+  margin-bottom: var(--margin-xxxs);
+  display: block;
+}
+.select-form .row .select-group-container label:hover {
+  cursor: pointer;
+  background: var(--nk-gray-25);
+  transition: 0.25s;
+}
+.select-form .row .select-group-container label .ttl {
+  width: 100%;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label {
+  padding: 0 calc( var(--padding-xxs) - 2px );
+  border: 2px solid var(--nk-primary-blue-500);
+  transition: 0.1s;
+}
+.select-form .row .select-group-container input[type="checkbox"]:checked + label .ttl {
+  line-height: calc( var(--btn-height-s) - ( 2px * 2 ) );
+  transition: 0.1s;
+}
+
+/* CALENDAR */
+#calendar {
+  width: 100%;
+  height: calc( 100% - ( var(--btn-height-s) + ( var(--padding-xs) * 2 ) + var(--margin-m) ) );
+}
+#calendar.plan .plan-block-container {
+  width: 100%;
+  height: 100%;
+  padding-right: var(--padding-xxs);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#calendar.plan .plan-block-container .plan {
+  width: 100%;
+  height: var(--btn-height-m);
+  padding: 0 var(--padding-xs);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin-bottom: var(--margin-xxs);
+  display: flex;
+}
+#calendar.plan .plan-block-container .plan:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.25s;
+}
+#calendar.plan .plan-block-container .plan .ttl {
+  width: 80%;
+  height: var(--btn-height-m);
+  font-size: var(--font-size-l);
+  line-height: var(--btn-height-m);
+}
+#calendar.plan .plan-block-container .plan .group-name {
+  width: 20%;
+  height: var(--btn-height-m);
+  font-size: var(--font-size-m);
+  text-align: right;
+  line-height: var(--btn-height-m);
+}
+
+#calendar.date .date-block-container {
+  width: 100%;
+  /* height: calc( 100% - ( var(--margin-s) + 120px ) ); */
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#calendar.date .date-block-container .time-container {
+  width: 32px;
+  height: calc( 128px * 24 );
+  border-right: 1px solid var(--nk-gray-100);
+}
+#calendar.date .date-block-container .time-container .time {
+  width: 32px;
+  height: 128px;
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  text-align: center;
+  border-top: 1px solid var(--nk-gray-100);
+}
+#calendar.date .date-block-container .time-container .time:nth-last-child(1) {
+  border-bottom: 1px solid var(--nk-gray-100);
+}
+#calendar.date .date-block-container .date-block {
+  width: calc( 100% - 32px );
+  height: calc( 128px * 24 );
+  padding: 0 var(--padding-xxxs);
+}
+#calendar.date .date-block-container .date-block .plan-container {
+  width: auto;
+  height: calc( 128px * 24 );
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+#calendar.date .date-block-container .date-block .plan-container .plan {
+  width: 240px;
+  padding: 0 var(--padding-xxxs);
+  border-radius: var(--radius-s);
+  margin-bottom: var(--margin-xxs);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  position: absolute;
+}
+#calendar.date .date-block-container .date-block .plan-container .plan:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.25s;
+}
+#calendar.date .date-block-container .date-block .plan-container .plan .ttl {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+
+#calendar.week .day-container {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  margin-bottom: var(--margin-xxxs);
+  display: flex;
+  flex-wrap: wrap;
+}
+#calendar.week .day-container .day {
+  width: calc( ( 100% - 32px ) / 7 );
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  text-align: center;
+}
+#calendar.week .day-container .time-space {
+  width: 32px;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+#calendar.week .date-num-container {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  display: flex;
+}
+#calendar.week .date-num-container .time-space {
+  width: 32px;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+#calendar.week .date-num-container .date-num {
+  width: calc( ( 100% - 32px ) / 7 );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  text-align: center;
+}
+#calendar.week .date-block-container {
+  width: 100%;
+  /* height: calc( 100% - ( ( var(--font-size-s) * var(--line-height-m) ) + var(--margin-xxxs) + var(--margin-s) + 120px ) ); */
+  height: calc( 100% - ( var(--font-size-s) * var(--line-height-m) ) );
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#calendar.week .date-block-container .time-container {
+  width: 32px;
+  height: calc( 128px * 24 );
+  border-right: 1px solid var(--nk-gray-100);
+}
+#calendar.week .date-block-container .time-container .time {
+  width: 32px;
+  height: 128px;
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  text-align: center;
+  border-top: 1px solid var(--nk-gray-100);
+}
+#calendar.week .date-block-container .time-container .time:nth-last-child(1) {
+  border-bottom: 1px solid var(--nk-gray-100);
+}
+#calendar.week .date-block-container .date-block {
+  width: calc( ( 100% - 32px ) / 7 );
+  height: calc( 128px * 24 );
+  padding: 0 var(--padding-xxxs);
+  border-right: 1px solid var(--nk-gray-100);
+}
+#calendar.week .date-block-container .date-block .plan-container {
+  width: auto;
+  height: calc( 128px * 24 );
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+#calendar.week .date-block-container .date-block .plan-container .plan {
+  width: 100px;
+  padding: 0 var(--padding-xxxs);
+  border-radius: var(--radius-s);
+  margin-bottom: var(--margin-xxs);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  position: absolute;
+}
+#calendar.week .date-block-container .date-block .plan-container .plan:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.25s;
+}
+#calendar.week .date-block-container .date-block .plan-container .plan .ttl {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+}
+
+#calendar.month .day-container {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  margin-bottom: var(--margin-xxxs);
+  display: flex;
+  flex-wrap: wrap;
+}
+#calendar.month .day {
+  width: calc( 100% / 7 );
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  text-align: center;
+}
+#calendar.month .date-block-container {
+  width: 100%;
+  /* height: calc( 100% - ( ( var(--font-size-s) * var(--line-height-m) ) + var(--margin-xxxs) + var(--margin-s) + 120px ) ); */
+  height: calc( 100% - ( ( var(--font-size-s) * var(--line-height-m) ) + var(--margin-xxxs) ) );
+  display: flex;
+  flex-wrap: wrap;
+}
+#calendar.month .date-block-container .space {
+  width: calc( 100% / 7 );
+}
+#calendar.month .date-block-container .date-block {
+  width: calc( 100% / 7 );
+  border: 1px solid var(--nk-gray-25);
+}
+#calendar.month .date-block-container .date-block .date-num {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  text-align: center;
+}
+#calendar.month .date-block-container .date-block .plan-container {
+  width: 100%;
+  height: calc( 100% - ( ( var(--font-size-s) * var(--line-height-m) * 3 ) ) );
+  padding: var(--padding-xxxs);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+}
+#calendar.month .date-block-container .date-block .plan-container::-webkit-scrollbar{
+  display: none;
+}
+#calendar.month .date-block-container .date-block .plan-container .plan {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  padding: 0 var(--padding-xxxs);
+  border-radius: var(--radius-s);
+  margin-bottom: var(--margin-xxs);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+}
+#calendar.month .date-block-container .date-block .plan-container .plan:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.25s;
+}
+#calendar.month .date-block-container .date-block .plan-container .plan .ttl {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-m) );
+  font-size: var(--font-size-s);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+}
+#calendar.month .date-block-container .date-block .plan-container .plan .ttl::-webkit-scrollbar{
+  display: none;
+}
+
+/* MODAL */
+.modal .content .top {
+  width: 100%;
+  margin-bottom: var(--margin-s);
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal .content .top .basic-info {
+  width: calc( 100% - 170px );
+}
+.modal .content .top .basic-info .ttl {
+  width: 100%;
+  height: calc( var(--font-size-xxl) * var(--line-height-l) );
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-xxl) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .span {
+  width: 100%;
+  height: calc( var(--font-size-s) * var(--line-height-l) );
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-l) );
+}
+.modal .content .top .basic-info .text {
+  width: 100%;
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-m) * var(--line-height-m) );
+  margin-top: var(--margin-xs);
+}
+.modal .content .top .btn-container {
+  width: 170px;
+}
+.modal .content .top .btn-container button {
+  width: 100%;
+}
+.modal .content .normal-tab-container .contents .content {
+  overflow-y: hidden;
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr th {
+  width: 145px;
+}
+.modal .content .normal-tab-container .contents .content .detail-table tr td {
+  width: calc( 100% - 145px );
+}
+
+@media screen and ( max-width: 959px ) {
+  #calendar {
+    height: calc( 100vh - ( var(--header-height) + var(--btn-height-m) + ( var(--btn-height-s) * 2 ) + ( var(--padding-xs) * 2 ) + ( var(--margin-xs) * 2 ) + ( var(--margin-xxs) * 3 ) ) );
+  }
+  #calendar.plan .plan-block-container .plan .ttl {
+    font-size: var(--font-size-s);
+  }
+  #calendar.plan .plan-block-container .plan .group-name {
+    display: none;
+  }
+
+  .single-block-large {
+    display: block;
+  }
+  
+  /* SELECT FORM */
+  .select-form {
+    margin-bottom: var(--margin-xxs);
+  }
+  .select-form .row {
+    margin-right: var(--margin-xxxs);
+  }
+  .select-form .row-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--margin-xxs);
+  }
+  .select-form .row-left button {
+    height: var(--btn-height-s);
+  }
+  .select-form .row-left #displayAtViewer {
+    width: calc( 100% - ( 32px * 2 ) );
+    font-size: var(--font-size-s);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .select-form .row-right button {
+    width: 100px;
+    font-size: var(--font-size-xs);
+  }
+  .select-form .row-right button .display-select-group {
+    width: calc( 100% - var(--font-size-s) );
+    height: var(--btn-height-s);
+  }
+  .select-form .row-right button .triangle {
+    width: var(--font-size-s);
+    height: var(--btn-height-s);
+  }
+  .select-form .row .select-group-container {
+    width: 200px;
+    text-align: left;
+    background: var(--white);
+    padding: var(--padding-xs);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-default) var(--nk-gray-100);
+    margin-top: var(--btn-height-s);
+    margin-left: -44px;
+    position: fixed;
+    z-index: 1002;
+    display: none;
+  }
+  .select-form .row .select-group-container input[type="checkbox"] {
+    display: none;
+  }
+  .select-form .row .select-group-container label {
+    width: 100%;
+    height: var(--btn-height-s);
+    padding: 0 var(--padding-xxs);
+    border-radius: var(--radius-m);
+    margin-bottom: var(--margin-xxxs);
+    display: block;
+  }
+  .select-form .row .select-group-container label:hover {
+    cursor: pointer;
+    background: var(--nk-gray-25);
+    transition: 0.25s;
+  }
+  .select-form .row .select-group-container label .ttl {
+    width: 100%;
+  }
+  .select-form .row .select-group-container input[type="checkbox"]:checked + label {
+    padding: 0 calc( var(--padding-xxs) - 2px );
+    border: 2px solid var(--nk-primary-blue-500);
+    transition: 0.1s;
+  }
+  .select-form .row .select-group-container input[type="checkbox"]:checked + label .ttl {
+    line-height: calc( var(--btn-height-s) - ( 2px * 2 ) );
+    transition: 0.1s;
+  }
+  
+  /* MODAL */
+  .modal .content .top {
+    display: block;
+  }
+  .modal .content .top .basic-info {
+    width: 100%;
+  }
+  .modal .content .top .basic-info .span {
+    height: calc( var(--font-size-s) * var(--line-height-l) * 2 );
+  }
+  .modal .content .top .basic-info .text {
+    width: 100%;
+    font-size: var(--font-size-m);
+    color: var(--nk-gray-500);
+    line-height: calc( var(--font-size-m) * var(--line-height-m) );
+    margin-top: var(--margin-xs);
+  }
+  .modal .content .top .btn-container {
+    width: 100%;
+  }
+  .modal .content .top .btn-container button {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr th {
+    width: 100%;
+  }
+  .modal .content .normal-tab-container .contents .content .detail-table tr td {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,94 @@
+.members {
+  width: 100%;
+  height: calc( 100vh - ( var(--header-height) + ( var(--margin-l) * 3 ) + var(--btn-height-m) + var(--margin-xxl) + ( var(--font-size-xxxl) * var(--line-height-l) ) + ( var(--font-size-m) * var(--line-height-m) ) + var(--btn-height-l) + var(--margin-m) ) );
+  padding: var(--padding-s);
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-l);
+  margin-bottom: var(--margin-m);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex; 
+  flex-wrap: wrap;
+}
+.members .no-data {
+  width: 100%;
+  font-size: var(--font-size-s);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-s) * var(--line-height-m) );
+  text-align: center;
+}
+.members .member-block {
+  width: 128px;
+  padding: var(--padding-xxs);
+  border: 4px solid var(--white);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-default) var(--nk-gray-100);
+  margin: 0 var(--margin-s) var(--margin-s) 0;
+}
+.members .member-block:hover {
+  cursor: pointer;
+  background: var(--nk-gray-25);
+  border: 0;
+  border: 4px solid var(--nk-gray-25);
+  box-shadow: None;
+  transition: 0.25s;
+}
+.members input[type="checkbox"]:checked + label .member-block {
+  border: 4px solid var(--nk-primary-blue-500);
+}
+.members .member-block .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 calc( ( 100% - 80px ) / 2 );
+  margin-bottom: var(--margin-xs);
+}
+.members .member-block .icon img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--nk-gray-100);
+  border-radius: var(--radius-full);
+}
+.members .member-block .name {
+  width: 100%;
+  height: calc( ( var(--font-size-m) * var(--line-height-l) ) );
+  font-size: var(--font-size-m);
+  color: var(--nk-gray-500);
+  line-height: calc( var(--font-size-m) * var(--line-height-l) );
+  text-align: center;
+}
+
+@media screen and (max-width: 959px) {
+  .members label {
+    width: 100%;
+  }
+  .members .member-block {
+    width: 100%;
+    height: calc( 40px + ( var(--padding-xxs) * 2 ) + 8px );
+    padding: var(--padding-xxs);
+  }
+  .members .member-block:hover {
+    background: var(--white);
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-default) var(--nk-gray-100);
+  }
+  .members .member-block .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    float: left;
+  }
+  .members .member-block .icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .members .member-block .name {
+    width: calc( 100% - 40px );
+    height: 64px;
+    font-size: var(--font-size-m);
+    color: var(--nk-gray-500);
+    line-height: 40px;
+    text-align: left;
+    padding-left: var(--padding-xxs);
+    float: left;
+  }
+}
